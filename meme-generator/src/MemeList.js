@@ -12,7 +12,7 @@ const MemeList = () => {
     }
 
     const remove = id => {
-        setMemes(memes.filter(meme => meme.id  !== id));
+        setMemes(memes => memes.filter(meme => meme.id !== id));
     };
 
     const memeComponents = memes.map(meme => (

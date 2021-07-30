@@ -2,11 +2,11 @@ import './Meme.css';
 
 const Meme = ({id, topText, bottomText, image, handleRemove}) => {
 
-    const removeMeme = (id) => handleRemove(id);
-
     const style = {
         backgroundImage: `url(${image})`
     };
+
+    const remove = () => handleRemove(id);
 
     return (
         <>
@@ -14,7 +14,7 @@ const Meme = ({id, topText, bottomText, image, handleRemove}) => {
                 <h1 className="Meme__text--top">{topText}</h1>
                 <h1 className="Meme__text--bottom">{bottomText}</h1>
             </div>
-            <button onClick={removeMeme}>Remove</button>
+            <button onClick={remove}>Remove</button>
         </>
     );
 }
