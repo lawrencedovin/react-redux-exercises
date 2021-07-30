@@ -1,4 +1,5 @@
 import './Todo.css';
+import PropTypes from "prop-types";
 
 const Todo = ({id, todoText, handleRemove}) => {
 
@@ -12,6 +13,10 @@ const Todo = ({id, todoText, handleRemove}) => {
             <button onClick={remove}>Remove</button>
         </>
     );
+};
+
+Todo.propTypes = {
+    todoText: PropTypes.string.isRequired
 };
 
 export default Todo;
