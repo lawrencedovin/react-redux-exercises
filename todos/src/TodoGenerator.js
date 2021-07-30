@@ -11,7 +11,7 @@ const TodoGenerator = () => {
     }
   
     const deleteTodo = (id) => {
-      dispatch({type: 'REMOVE_MEME', id});
+      dispatch({type: 'REMOVE_TODO', id});
     }
   
     const todoComponents = todos.map(todo => (
